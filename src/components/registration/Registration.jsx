@@ -23,7 +23,7 @@ class Registration extends Component {
     }
 
     onRegSubmit = () => {
-        fetch('http://localhost:3000/register', {
+        fetch('http://localhost:3001/register', {
             method: 'post',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({
@@ -34,7 +34,7 @@ class Registration extends Component {
         })
         .then(response => response.json())
         .then(user => {
-            if (user) {
+            if (user.id) {
                 this.props.onRouteChange('home');
                 this.props.loadUser(user);
             }
@@ -58,7 +58,7 @@ class Registration extends Component {
                         </div>
                         <div className="mv3">
                             <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                            <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="new-password" name="password"  id="password" onChange={this.onRegPassword}/>
+                            <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" onChange={this.onRegPassword}/>
                         </div>
                     </fieldset>
                     <div className="">

@@ -18,7 +18,7 @@ class SignIn extends Component {
     }
 
     onSignInSubmit = () => {
-        fetch('http://localhost:3000/signin', {
+        fetch('http://localhost:3001/signin', {
             method: 'post',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({
@@ -45,11 +45,11 @@ class SignIn extends Component {
                             <legend className="f1 fw6 ph0 mh0">Sign In</legend>
                             <div className="mt3">
                                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                                <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" onChange={this.onSignInEmail}/>
+                                <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  autoComplete="username" onChange={this.onSignInEmail}/>
                             </div>
                             <div className="mv3">
                                 <label className="db fw6 lh-copy f6" htmlFor="current-password">Password</label>
-                                <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   password" onChange={this.onSignInPassword}/>
+                                <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  autoComplete="current-password" onChange={this.onSignInPassword}/>
                             </div>
                         </fieldset>
                         <div className="">
