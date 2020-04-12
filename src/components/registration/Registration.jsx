@@ -23,7 +23,7 @@ class Registration extends Component {
     }
 
     onRegSubmit = () => {
-        fetch('https://git.heroku.com/nameless-hamlet-56582.git/register', {
+        fetch('https://nameless-hamlet-56582.herokuapp.com/register', {
             method: 'post',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({
